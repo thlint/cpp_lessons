@@ -1,4 +1,6 @@
-﻿#include <iostream>
+﻿// уроки по cpp https://ravesli.com/uroki-cpp/   https://code-live.ru/tag/cpp-manual/
+
+#include <iostream>
 #include <windows.h>
 using namespace std;
 int main()
@@ -11,9 +13,11 @@ int main()
 	unsigned short int c;
 	// float - плавающая зпт, double - float*2 , char - символьный, bool - логический тип; long int 4 байта;
 	cout << "Введите первое число: ";
-	cin >> a; //ввод значения пользователем в переменную a
+//	cin >> a; //ввод значения пользователем в переменную a
 	cout << "Введите второе число: ";
-	cin >> b;
+//	cin >> b;
+	a = 4;
+	b = 6;
 	c = 10;
 	cout << "Третье число = " << c << endl;
 	long long int d = a + b; //инициализация переменной d с присвоением суммы до 64 бит[+−9 223 372 036 854 775 807]
@@ -22,10 +26,7 @@ int main()
 	cout << endl << "Их произведение на третье число = " << e << endl; //вывод ответа
 	double num; // объявляем переменную num типа двойной точности с плавающей точкой
 	num = d; // сумма первых двух введенных чисел
-	cout << num << " Это число типа double, чтобы вывести значения после запятой пишем cout.width(20); " << endl;
 	num = num - 0.000001;
-	//cout << "cout.width(30)" << endl;
-	//cout.width(20);
 	cout << num << " Это число типа double выводим через cout" << endl;
 	printf("Выводим число double через printf mun = %.10lf \n", num); //для double пишем %.10lf для float пишем %.10f
 	float num_f = num;
@@ -54,6 +55,31 @@ int main()
 		cout << "Все остальные варианты" << endl;
 		int k = 4;
 	}
+	//					ЦИКЛЫ
+	int i;
+	for (i = 1; i <= 10; i++) {
+		num_f = i;
+		printf("i = %.10f \n", num_f);
+	};
+	// while
+	i = 0;
+	while (i <= 10) {
+		i++;
+		printf("while num_f+i = %.10f \n", num_f+=i);  //num_f = num_f + i
+	}
+	// do while
+	i = 0;
+	do {
+		i++;
+		printf("do while num_f+i = %.10f \n", num_f += i);  //num_f = num_f + i
+	} while (i <= 10);
+	
+	
+	
+	
+	
+	
+	
 	system("pause");
 	return 0;
 }
