@@ -23,11 +23,13 @@ int main()
 	double num; // объявляем переменную num типа двойной точности с плавающей точкой
 	num = d; // сумма первых двух введенных чисел
 	cout << num << " Это число типа double, чтобы вывести значения после запятой пишем cout.width(20); " << endl;
-	num = num - 0.01;
-	//num = 1234.5678;
-	cout << "width(20)" << endl;
-	cout.width(20);
-	cout << num << " Это число типа double" << endl;
+	num = num - 0.000001;
+	//cout << "cout.width(30)" << endl;
+	//cout.width(20);
+	cout << num << " Это число типа double выводим через cout" << endl;
+	printf("Выводим число double через printf mun = %.10lf \n", num); //для double пишем %.10lf для float пишем %.10f
+	float num_f = num;
+	printf("Выводим число float через printf mun_f = %.10f \n", num_f); //для double пишем %.10lf для float пишем %.10f
 	if (num < 10) cout << "Сумма чисел = " << num << " меньше 10" << endl; // простое условие
 	else cout << "Сумма чисел = " << num << " не меньше 10" << endl;  // эту строчку можно опустить
 	
