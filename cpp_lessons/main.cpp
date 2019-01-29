@@ -1,4 +1,4 @@
-﻿// урок 7 указатели
+﻿// урок 7 указатели урок 8 динамические массивы
 // уроки по cpp https://ravesli.com/uroki-cpp/   https://code-live.ru/tag/cpp-manual/
 #include <iostream>
 #include <windows.h>
@@ -23,9 +23,17 @@ int main()
 	cout << "*ptr_a = " << *ptr_a << endl; //выводится переменная a
 	cout << "*float *e = " << *e - 0.01 << endl; //выводится резултат работы с переменной e типа float
 	delete e; // освобождает место
-		cout << "*float *e = " << *e - 0.01 << endl; //вызывает останов программы
-		?
-	
+//		cout << "*float *e = " << *e - 0.01 << endl; //вызывает останов программы?
+
+// динамические массивы	
+	int num; // Размер массива
+	num = 333;
+	int *p_darr = new int[num]; //выделение памяти для массива
+	for (int i = 0; i < num; i++) {
+		if (i == 0) p_darr[i] = 1;
+		else p_darr[i] = p_darr[i-1] + i ;
+		cout << "Значение " << i << " -го элемента равно " << p_darr[i] << endl;
+	}
 	system("pause");
 	return 0;
 }
