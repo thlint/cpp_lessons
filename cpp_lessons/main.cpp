@@ -1,12 +1,15 @@
-﻿// урок 7 указатели урок 8 динамические массивы
+﻿// урок 7 указатели урок 8 динамические массивы урок 8 параметры командной строки
 // уроки по cpp https://ravesli.com/uroki-cpp/   https://code-live.ru/tag/cpp-manual/
 #include <iostream>
 #include <windows.h>
 using namespace std;
-int main()
+int main(int argcount, char *argv[]) //количество аргументов-параметров командной строки, указатель на массив с аргументами
 {
     SetConsoleOutputCP(1251); //Вывод
 	SetConsoleCP(1251);		  // Ввод
+	
+		for (int i = 0; i < argcount; i++) cout << "Argument " << i << " : " << argv[i] << endl; 	// Выводим список аргументов в цикле
+	
 	int a; //объявление статической переменной
 	int b = 5; //инициализация статической переменной
 	int *c = new int; //объявление указалется для переменной типа int
@@ -27,7 +30,7 @@ int main()
 
 // динамические массивы	
 	int num; // Размер массива
-	num = 333;
+	num = 11;
 	int *p_darr = new int[num]; //выделение памяти для массива
 	for (int i = 0; i < num; i++) {
 		if (i == 0) p_darr[i] = 1;
