@@ -14,6 +14,12 @@ public:
 	
 	int get_scores(int ii) { return scores[ii]; }
 	void set_average_ball(float ball) { average_ball = ball; } // установка среднего балла
+	void set_average_ball_auto() {// автоматическая установка среднего балла
+		average_ball = 0;
+		int sum_ball = 0;
+		for (int i = 0; i < 5; i++) sum_ball += scores[i];
+		average_ball = sum_ball / 5;
+	}
 	float get_average_ball() { return average_ball; } // получение среднего балла
 private:
 	int scores[5]; // промежуточные оценки
